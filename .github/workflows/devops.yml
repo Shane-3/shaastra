@@ -12,8 +12,8 @@ jobs:
          uses: docker/login-action@v3
          with:
             registry: registry.hub.docker.com
-            username: ${{ secrets.shanechellam }}
-            password: ${{ secrets.shanechellam }}
+            username: ${{ secrets.DOCKERHUB_USERNAME }}
+            password: ${{ secrets.DOCKERHUB_TOKEN }}
        - run: |
           docker build -t registry.hub.docker.com/shanechellam/shaastra .
           docker push registry.hub.docker.com/shanechellam/shaastra
